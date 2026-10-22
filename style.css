@@ -7,7 +7,8 @@
     --color-letra: #e2e8f0;
     --color-circulo: #00bbbe;
     --color-boton: #162444;
-    --color-boton-borde: #003637;
+    --color-boton-borde: #00b7ff;
+    --color-link: #ff0099;
 }
 
 body {
@@ -60,6 +61,7 @@ footer {
 
 #boton-inicio:hover {
     background-color: var(--color-boton-borde);
+    color: var(--color-marca);
 }
 
 #boton-inicio:focus-visible {
@@ -71,11 +73,23 @@ footer {
     font-size: 1.5rem;
 }
 
+a {
+    color: var(--color-link);
+}
+
 @media (min-width: 600px) {
     h1 {
         font-size: 3rem;
     }
     #guia {
         font-size: 2rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #circulo-resp,
+    #circulo-resp.inflado {
+        transform: scale(0.75);
+        transition: none;
     }
 }
